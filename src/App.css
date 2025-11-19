@@ -1,0 +1,59 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(
+    140deg,
+    #ffecf5 0%,
+    #d9e8ff 35%,
+    #80bfff 70%,
+    #4a6edb 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 3rem;
+}
+
+.card {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+    0 0 25px rgba(255, 255, 255, 0.6) inset;
+  max-width: 340px;
+
+  animation: fadeIn 0.8s ease forwards;
+  transform: translateY(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25),
+    0 0 35px rgba(255, 255, 255, 0.9) inset, 0 0 25px rgba(255, 220, 255, 0.8);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
