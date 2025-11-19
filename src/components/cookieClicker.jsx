@@ -20,7 +20,7 @@ export default function CookieClicker() {
         }}
       >
         <img
-          src="/kjeks.png"
+          src="kjeks.png"
           alt="cookie"
           style={{
             width: "150px",
